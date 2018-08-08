@@ -169,7 +169,6 @@ abstract class xmlTemplates {
 				$class['cachetime'] = $_SESSION[APPCONFIG]->getValue('cache','template_time');
 				$class['types'] = array('creation','modification');
 				$class['dir'] = TMPLDIR;
-
 				break;
 
 			default:

@@ -17,7 +17,7 @@ define('HTDOCDIR',sprintf('%s/',realpath(LIBDIR.'../htdocs/')));
 define('LANGDIR',sprintf('%s/',realpath(LIBDIR.'../locale/')));
 define('CONFDIR',sprintf('%s/',realpath(LIBDIR.'../config')));
 define('QUERYDIR',sprintf('%s/',realpath(LIBDIR.'../queries/')));
-define('TMPLDIR',sprintf('%s/',realpath(LIBDIR.'../templates/')));
+define('TMPLDIR',sprintf('%s/',realpath(LIBDIR.'../templates')));
 define('DOCDIR',sprintf('%s/',realpath(LIBDIR.'../doc/')));
 define('HOOKSDIR',sprintf('%s/',realpath(LIBDIR.'../hooks/')));
 define('JSDIR','js/');
@@ -1126,6 +1126,7 @@ function masort(&$data,$sortby,$rev=0) {
  * Is compression enabled for output
  */
 function isCompress() {
+	//var_dump($_SESSION[APPCONFIG]);
 	return ($_SESSION[APPCONFIG]->getValue('appearance','compress')
 		&& ! ini_get('zlib.output_compression')
 		&& preg_match('/gzip/',$_SERVER['HTTP_ACCEPT_ENCODING']));

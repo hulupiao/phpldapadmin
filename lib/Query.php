@@ -18,7 +18,6 @@ class Query extends xmlTemplate {
 
 	public function __get($name)
     {
-        // TODO: Implement __get() method.
 		if(isset($this->$name)) {
             return $this->$name;
 		}
